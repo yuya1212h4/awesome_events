@@ -1,0 +1,9 @@
+header
+  .navbar.navbar-default role="navigation"
+    .container
+      .navbar-header
+        = link_to 'AwsomeEvents', root_path, class: 'navbar-brand'
+      .navbar-collapse.navbar-responsive-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav.navbar-right
+          li
+            = link_to 'Twitterでログイン', '/auth/twitter'
