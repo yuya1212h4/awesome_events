@@ -1,0 +1,16 @@
+header
+  .navbar.navbar-default role="navigation"
+    .container
+      .navbar-header
+        / button.navbar-toggle data-toggle="collapse" data-target="#bs-exaple-navbar-collapse-1"
+        /   span.sr-only Toggle navigation
+        /   span.icon-bar
+        /   span.icon-bar
+        /   span.icon-bar
+        = link_to 'AwsomeEvents', root_path, class: 'navbar-brand'
+      .navbar-collapse.navbar-responsive-collapse#bs-example-navbar-collapse-1
+        ul.nav.navbar-nav.navbar-right
+          - if logged_in?
+            li= link_to 'ログアウト', logout_path
+          - else
+            li= link_to 'Twitterでログイン', '/auth/twitter'
