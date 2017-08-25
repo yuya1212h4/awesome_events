@@ -1,0 +1,26 @@
+.page-header
+  h1 = @event.name
+  
+.panel.panel-default
+  .panel-heading 主催者
+  .panel-body
+    = link_to("https://twitter.com/#{@event.owner.nickname}") do
+      = image_tag @event.owner.image_url
+      = "@#{p@event.owner.nickname}"
+
+.panel.panel-default
+  .panel-heading 開催時間
+  .panel-body
+    = "#{start_time(@event)} - "
+    = end_time(@event)
+
+.panel.panel-default
+  .panel-heading 開催場所
+  .panel-body
+    = @event.place
+
+.panel.panel-default
+  .panel-heading イベント内容
+  .panel-body
+    = @event.content
+    
