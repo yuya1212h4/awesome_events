@@ -2,13 +2,13 @@ header
   .navbar.navbar-default role="navigation"
     .container
       .navbar-header
-        / button.navbar-toggle data-toggle="collapse" data-target="#bs-exaple-navbar-collapse-1"
-        /   span.sr-only Toggle navigation
-        /   span.icon-bar
-        /   span.icon-bar
-        /   span.icon-bar
+        button.navbar-toggle data-toggle="collapse" data-target="#bs-exaple-navbar-collapse-1"
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
         = link_to 'AwsomeEvents', root_path, class: 'navbar-brand'
-      .navbar-collapse.navbar-responsive-collapse#bs-example-navbar-collapse-1
+      .collapse.navbar-collapse#bs-example-navbar-collapse-1
         ul.nav.navbar-nav.navbar-right
           li= link_to 'イベント作成', new_event_path
           - if logged_in?

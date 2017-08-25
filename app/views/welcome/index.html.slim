@@ -1,2 +1,10 @@
-h1 Welcome#index
-p Find me in app/views/welcome/index.html.slim
+.page-header
+  h1 イベント一覧
+.list-group
+  - @events.each do |event|
+    = link_to event_path(event), class: 'list-group-item' do
+      h4.list-group-item-heading
+        = event.name
+      p.list-group-item-text
+        = "#{start_time(event)} - "
+        = end_time(event)

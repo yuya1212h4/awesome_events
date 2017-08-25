@@ -36,6 +36,7 @@ gem 'slim-rails'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 
 group :development, :test do
