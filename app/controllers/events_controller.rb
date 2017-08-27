@@ -31,7 +31,6 @@ class EventsController < ApplicationController
   end
 
   def destroy
-
     @event.destroy!
     redirect_to root_path, notice: '削除しました'
   end
